@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72617C5C28A0F603006E9935 /* OnbanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72617C5B28A0F603006E9935 /* OnbanDTO.swift */; };
+		72617C5E28A113A0006E9935 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72617C5D28A113A0006E9935 /* ImageManager.swift */; };
 		72B4C37528A0E2890025BB0F /* SideDish_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C37428A0E2890025BB0F /* SideDish_SwiftUIApp.swift */; };
 		72B4C37728A0E2890025BB0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C37628A0E2890025BB0F /* ContentView.swift */; };
 		72B4C37928A0E28A0025BB0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C37828A0E28A0025BB0F /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 		72B4C38628A0E28A0025BB0F /* SideDish_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C38528A0E28A0025BB0F /* SideDish_SwiftUITests.swift */; };
 		72B4C39028A0E28A0025BB0F /* SideDish_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C38F28A0E28A0025BB0F /* SideDish_SwiftUIUITests.swift */; };
 		72B4C39228A0E28A0025BB0F /* SideDish_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C39128A0E28A0025BB0F /* SideDish_SwiftUIUITestsLaunchTests.swift */; };
+		72B4C39F28A0E91E0025BB0F /* OnbanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C39E28A0E91E0025BB0F /* OnbanRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72617C5B28A0F603006E9935 /* OnbanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbanDTO.swift; sourceTree = "<group>"; };
+		72617C5D28A113A0006E9935 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		72B4C37128A0E2890025BB0F /* SideDish-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SideDish-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B4C37428A0E2890025BB0F /* SideDish_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDish_SwiftUIApp.swift; sourceTree = "<group>"; };
 		72B4C37628A0E2890025BB0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +49,7 @@
 		72B4C38B28A0E28A0025BB0F /* SideDish-SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SideDish-SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B4C38F28A0E28A0025BB0F /* SideDish_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDish_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		72B4C39128A0E28A0025BB0F /* SideDish_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDish_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		72B4C39E28A0E91E0025BB0F /* OnbanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbanRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				72B4C37628A0E2890025BB0F /* ContentView.swift */,
 				72B4C37828A0E28A0025BB0F /* Assets.xcassets */,
 				72B4C37A28A0E28A0025BB0F /* Preview Content */,
+				72B4C39E28A0E91E0025BB0F /* OnbanRepository.swift */,
+				72617C5B28A0F603006E9935 /* OnbanDTO.swift */,
+				72617C5D28A113A0006E9935 /* ImageManager.swift */,
 			);
 			path = "SideDish-SwiftUI";
 			sourceTree = "<group>";
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B4C39F28A0E91E0025BB0F /* OnbanRepository.swift in Sources */,
+				72617C5E28A113A0006E9935 /* ImageManager.swift in Sources */,
 				72B4C37728A0E2890025BB0F /* ContentView.swift in Sources */,
+				72617C5C28A0F603006E9935 /* OnbanDTO.swift in Sources */,
 				72B4C37528A0E2890025BB0F /* SideDish_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
