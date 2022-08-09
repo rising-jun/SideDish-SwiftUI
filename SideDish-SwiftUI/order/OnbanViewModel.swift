@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class OnbanRepository: ObservableObject {
+final class OnbanViewModel: ObservableObject {
     @Published private(set) var onbanData: [DishCategory: Onban] = [:]  {
         willSet {
             print(onbanData)
@@ -57,6 +57,10 @@ final class OnbanRepository: ObservableObject {
             .replaceError(with: [:])
             .receive(on: DispatchQueue.main)
             .assign(to: \.onbanData, on: self)
+    }
+    
+    func isSale(menu: Menu) -> Bool {
+        menu.n_price == nil ? false : true
     }
     
 }
