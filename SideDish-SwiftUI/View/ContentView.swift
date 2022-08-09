@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var sideDishInfo:[SideDishInfo]
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(sideDishInfo) {_ in
+            
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(sideDishInfo: [SideDishInfo(body: [Me])])
     }
 }

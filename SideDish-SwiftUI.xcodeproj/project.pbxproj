@@ -14,6 +14,9 @@
 		72B4C38628A0E28A0025BB0F /* SideDish_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C38528A0E28A0025BB0F /* SideDish_SwiftUITests.swift */; };
 		72B4C39028A0E28A0025BB0F /* SideDish_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C38F28A0E28A0025BB0F /* SideDish_SwiftUIUITests.swift */; };
 		72B4C39228A0E28A0025BB0F /* SideDish_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C39128A0E28A0025BB0F /* SideDish_SwiftUIUITestsLaunchTests.swift */; };
+		8D41903628A238E9003110AB /* SideDishInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41903328A238E9003110AB /* SideDishInfo.swift */; };
+		8D41903728A238E9003110AB /* DetailDishInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41903428A238E9003110AB /* DetailDishInfo.swift */; };
+		8D41903828A238E9003110AB /* PriceConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41903528A238E9003110AB /* PriceConvertor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		72B4C38B28A0E28A0025BB0F /* SideDish-SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SideDish-SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B4C38F28A0E28A0025BB0F /* SideDish_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDish_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		72B4C39128A0E28A0025BB0F /* SideDish_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDish_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D41903328A238E9003110AB /* SideDishInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideDishInfo.swift; sourceTree = "<group>"; };
+		8D41903428A238E9003110AB /* DetailDishInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDishInfo.swift; sourceTree = "<group>"; };
+		8D41903528A238E9003110AB /* PriceConvertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceConvertor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				72B4C37428A0E2890025BB0F /* SideDish_SwiftUIApp.swift */,
-				72B4C37628A0E2890025BB0F /* ContentView.swift */,
+				8D41903E28A24132003110AB /* SupportingFiles */,
+				8D41903B28A2390F003110AB /* View */,
+				8D41903928A238F4003110AB /* Entity */,
+				8D41903A28A238FD003110AB /* Common */,
 				72B4C37828A0E28A0025BB0F /* Assets.xcassets */,
 				72B4C37A28A0E28A0025BB0F /* Preview Content */,
 			);
@@ -125,6 +134,38 @@
 				72B4C39128A0E28A0025BB0F /* SideDish_SwiftUIUITestsLaunchTests.swift */,
 			);
 			path = "SideDish-SwiftUIUITests";
+			sourceTree = "<group>";
+		};
+		8D41903928A238F4003110AB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8D41903428A238E9003110AB /* DetailDishInfo.swift */,
+				8D41903328A238E9003110AB /* SideDishInfo.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8D41903A28A238FD003110AB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8D41903528A238E9003110AB /* PriceConvertor.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8D41903B28A2390F003110AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72B4C37628A0E2890025BB0F /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D41903E28A24132003110AB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D41903628A238E9003110AB /* SideDishInfo.swift in Sources */,
 				72B4C37728A0E2890025BB0F /* ContentView.swift in Sources */,
+				8D41903728A238E9003110AB /* DetailDishInfo.swift in Sources */,
 				72B4C37528A0E2890025BB0F /* SideDish_SwiftUIApp.swift in Sources */,
+				8D41903828A238E9003110AB /* PriceConvertor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
