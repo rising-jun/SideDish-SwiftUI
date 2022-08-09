@@ -26,6 +26,17 @@ struct Menu: Codable, Hashable {
 
 struct DetailDishInfo: Codable {
     let data: MenuDetail
+    
+    func convertEntity() -> DetailDishEntity {
+        return DetailDishEntity(data: data)
+    }
+}
+
+class DetailDishEntity {
+    init(data: MenuDetail?) {
+        self.data = data
+    }
+    let data: MenuDetail?
 }
 
 struct MenuDetail: Codable {

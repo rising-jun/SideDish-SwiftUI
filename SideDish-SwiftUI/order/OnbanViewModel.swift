@@ -9,11 +9,7 @@ import Foundation
 import Combine
 
 final class OnbanViewModel: ObservableObject {
-    @Published private(set) var onbanData: [DishCategory: Onban] = [:]  {
-        willSet {
-            print(onbanData)
-        }
-    }
+    @Published private(set) var onbanData: [DishCategory: Onban] = [:]
     let keys: [DishCategory] = [.main, .soup, .side]
     
     private var dataCancellable: Cancellable? {

@@ -11,9 +11,8 @@ struct OrderView: View {
     
     @ObservedObject var viewModel = OnbanViewModel()
     init() {
-       UITableView.appearance().backgroundColor = .white
+        UITableView.appearance().backgroundColor = .white
     }
-    
     var body: some View {
         NavigationView {
             ZStack() {
@@ -22,8 +21,9 @@ struct OrderView: View {
                         Section {
                             if let onban = viewModel.onbanData[key] {
                                 ForEach(onban.body, id: \.self) { menu in
-                                    OnbanContentView(onban: menu)
-                                        .padding(.bottom, 10)
+                                    NavigationLink(destination: DetailView(id: menu.detail_hash)) {
+                                        OnbanContentView(onban: menu)
+                                    }.padding(.bottom, 10)
                                 }
                             }
                         } header: {
@@ -85,7 +85,7 @@ struct OnbanContentView: View {
                         Text(onban.s_price ?? "nil")
                             .font(.system(size: 15,weight: .bold, design: .default))
                         Text("~\(onban.n_price ?? "")~")
-                                .font(.system(size: 15))
+                            .font(.system(size: 15))
                     }.padding(.bottom, 8)
                     HStack {
                         ForEach(onban.badge ?? [], id: \.self) { badge in
@@ -100,11 +100,12 @@ struct OnbanContentView: View {
                                     }
                                     .background(Color.blue)
                                     .cornerRadius(15)
-                                        
+                                    
                                 case .event:
                                     ZStack(alignment: .center) {
                                         Text(badgeType.text)
                                             .foregroundColor(.white)
+                                            .lineLimit(1)
                                             .font(.system(size: 15, weight: .medium, design: .default))
                                             .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
                                     }
@@ -120,8 +121,6 @@ struct OnbanContentView: View {
             }
         }.onAppear {
             contentViewModel.fetchImage(from: onban.image)
-        }.onTapGesture {
-            print("tapped \(onban.title)")
         }
         
     }
