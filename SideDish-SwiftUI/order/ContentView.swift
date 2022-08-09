@@ -22,7 +22,7 @@ struct OrderView: View {
                         Section {
                             if let onban = viewModel.onbanData[key] {
                                 ForEach(onban.body, id: \.self) { menu in
-                                    OnbanContentView(onban: menu, image: nil)
+                                    OnbanContentView(onban: menu)
                                         .padding(.bottom, 10)
                                 }
                             }
@@ -62,11 +62,12 @@ struct OnbanHeaderView: View {
 
 struct OnbanContentView: View {
     @State var onban: Menu
-    @State var image: UIImage?
+    @ObservedObject var contentViewModel = OnbanContentViewModel()
+    
     var body: some View {
         ZStack {
             HStack {
-                Image(uiImage: image ?? UIImage())
+                Image(uiImage: UIImage(data: contentViewModel.imageData) ?? UIImage())
                     .resizable()
                     .frame(width: 120, height: 120, alignment: .center)
                     .padding(.trailing, 5)
@@ -118,13 +119,11 @@ struct OnbanContentView: View {
                 }
             }
         }.onAppear {
-            ImageManager.shared.fetchImage(from: onban.image)
-                .map { UIImage(data: $0) }
-                .compactMap { $0 }
-                .eraseToAnyPublisher()
-                .sink(receiveValue: { image = $0 })
+            contentViewModel.fetchImage(from: onban.image)
+        }.onTapGesture {
+            print("tapped \(onban.title)")
         }
-        .listRowBackground(Color.white)
+        
     }
 }
 

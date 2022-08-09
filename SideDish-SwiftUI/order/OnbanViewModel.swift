@@ -58,11 +58,6 @@ final class OnbanViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .assign(to: \.onbanData, on: self)
     }
-    
-    func isSale(menu: Menu) -> Bool {
-        menu.n_price == nil ? false : true
-    }
-    
 }
 
 enum DishCategory {
