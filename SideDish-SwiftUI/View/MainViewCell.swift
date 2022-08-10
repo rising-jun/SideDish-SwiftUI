@@ -17,7 +17,10 @@ struct MainViewCell: View {
             KFImage(URL(string: menu.image))
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                
+                .frame(width: 170)
+            
+            Spacer()
+            
             VStack(alignment: .leading, spacing: 5.0) {
                 
                 Text(menu.title)
@@ -42,6 +45,7 @@ struct MainViewCell: View {
                 HStack {
                 ForEach(menu.badge ?? [] , id: \.self) { badge in
                     Text(badge)
+                        .frame(height: 20)
                         .padding(EdgeInsets(top: 4,
                                             leading: 16,
                                             bottom: 4,
@@ -55,6 +59,7 @@ struct MainViewCell: View {
                 }
             }
         }
+        .padding(.trailing, 8.0)
         .lineSpacing(8)
         .background(Color.yellow)
     }
@@ -62,6 +67,6 @@ struct MainViewCell: View {
 
 struct MainViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainViewCell(menu: MockData.sideDishInfo.body[0])
+        MainViewCell(menu: MockData.sideDishInfo.body[2])
     }
 }
