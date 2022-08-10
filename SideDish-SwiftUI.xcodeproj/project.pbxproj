@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72B4C37528A0E2890025BB0F /* SideDish_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C37428A0E2890025BB0F /* SideDish_SwiftUIApp.swift */; };
-		72B4C37728A0E2890025BB0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C37628A0E2890025BB0F /* ContentView.swift */; };
+		72B4C37728A0E2890025BB0F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C37628A0E2890025BB0F /* MainView.swift */; };
 		72B4C37928A0E28A0025BB0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C37828A0E28A0025BB0F /* Assets.xcassets */; };
 		72B4C37C28A0E28A0025BB0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C37B28A0E28A0025BB0F /* Preview Assets.xcassets */; };
 		72B4C38628A0E28A0025BB0F /* SideDish_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C38528A0E28A0025BB0F /* SideDish_SwiftUITests.swift */; };
@@ -17,6 +17,9 @@
 		8D41903628A238E9003110AB /* SideDishInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41903328A238E9003110AB /* SideDishInfo.swift */; };
 		8D41903728A238E9003110AB /* DetailDishInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41903428A238E9003110AB /* DetailDishInfo.swift */; };
 		8D41903828A238E9003110AB /* PriceConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41903528A238E9003110AB /* PriceConvertor.swift */; };
+		8D41904028A38BF3003110AB /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41903F28A38BF3003110AB /* MockData.swift */; };
+		8D41904228A39356003110AB /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41904128A39356003110AB /* MainViewCell.swift */; };
+		8D41904528A39470003110AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8D41904428A39470003110AB /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 /* Begin PBXFileReference section */
 		72B4C37128A0E2890025BB0F /* SideDish-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SideDish-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B4C37428A0E2890025BB0F /* SideDish_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDish_SwiftUIApp.swift; sourceTree = "<group>"; };
-		72B4C37628A0E2890025BB0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72B4C37628A0E2890025BB0F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		72B4C37828A0E28A0025BB0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B4C37B28A0E28A0025BB0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72B4C38128A0E28A0025BB0F /* SideDish-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SideDish-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +53,8 @@
 		8D41903328A238E9003110AB /* SideDishInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideDishInfo.swift; sourceTree = "<group>"; };
 		8D41903428A238E9003110AB /* DetailDishInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDishInfo.swift; sourceTree = "<group>"; };
 		8D41903528A238E9003110AB /* PriceConvertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceConvertor.swift; sourceTree = "<group>"; };
+		8D41903F28A38BF3003110AB /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		8D41904128A39356003110AB /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D41904528A39470003110AB /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				72B4C37428A0E2890025BB0F /* SideDish_SwiftUIApp.swift */,
-				8D41903E28A24132003110AB /* SupportingFiles */,
 				8D41903B28A2390F003110AB /* View */,
 				8D41903928A238F4003110AB /* Entity */,
 				8D41903A28A238FD003110AB /* Common */,
+				8D41903E28A24132003110AB /* SupportingFiles */,
 				72B4C37828A0E28A0025BB0F /* Assets.xcassets */,
 				72B4C37A28A0E28A0025BB0F /* Preview Content */,
 			);
@@ -156,7 +162,8 @@
 		8D41903B28A2390F003110AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				72B4C37628A0E2890025BB0F /* ContentView.swift */,
+				72B4C37628A0E2890025BB0F /* MainView.swift */,
+				8D41904128A39356003110AB /* MainViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 		8D41903E28A24132003110AB /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8D41903F28A38BF3003110AB /* MockData.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -184,6 +192,9 @@
 			dependencies = (
 			);
 			name = "SideDish-SwiftUI";
+			packageProductDependencies = (
+				8D41904428A39470003110AB /* Kingfisher */,
+			);
 			productName = "SideDish-SwiftUI";
 			productReference = 72B4C37128A0E2890025BB0F /* SideDish-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +267,9 @@
 				Base,
 			);
 			mainGroup = 72B4C36828A0E2890025BB0F;
+			packageReferences = (
+				8D41904328A39470003110AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 72B4C37228A0E2890025BB0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,10 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D41904028A38BF3003110AB /* MockData.swift in Sources */,
 				8D41903628A238E9003110AB /* SideDishInfo.swift in Sources */,
-				72B4C37728A0E2890025BB0F /* ContentView.swift in Sources */,
+				72B4C37728A0E2890025BB0F /* MainView.swift in Sources */,
 				8D41903728A238E9003110AB /* DetailDishInfo.swift in Sources */,
 				72B4C37528A0E2890025BB0F /* SideDish_SwiftUIApp.swift in Sources */,
+				8D41904228A39356003110AB /* MainViewCell.swift in Sources */,
 				8D41903828A238E9003110AB /* PriceConvertor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +643,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D41904328A39470003110AB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D41904428A39470003110AB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D41904328A39470003110AB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72B4C36928A0E2890025BB0F /* Project object */;
 }

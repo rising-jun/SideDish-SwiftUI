@@ -17,7 +17,7 @@ extension SideDishInfo: Equatable {
     }
 }
 
-struct Menu: Codable, Equatable, Identifiable {
+struct Menu: Codable, Hashable, Identifiable {
     
     let id: String
     let image: String
@@ -27,11 +27,11 @@ struct Menu: Codable, Equatable, Identifiable {
     let n_price: String?
     let s_price: String?
     let badge: [String]?
-    
+
     enum CodingKeys: String, CodingKey {
         case image, delivery_type, title, description, n_price, s_price, badge
         case id = "detail_hash"
-        
+
     }
-    
+
 }
