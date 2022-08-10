@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72455BAA28A38558007E2C07 /* ThumbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72455BA928A38558007E2C07 /* ThumbViewModel.swift */; };
 		72617C5C28A0F603006E9935 /* OnbanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72617C5B28A0F603006E9935 /* OnbanDTO.swift */; };
 		72617C5E28A113A0006E9935 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72617C5D28A113A0006E9935 /* ImageManager.swift */; };
 		7276F69C28A252EB00539AB6 /* OnbanContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276F69B28A252EB00539AB6 /* OnbanContentViewModel.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72455BA928A38558007E2C07 /* ThumbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbViewModel.swift; sourceTree = "<group>"; };
 		7246E32A28A14576000446A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		72617C5B28A0F603006E9935 /* OnbanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbanDTO.swift; sourceTree = "<group>"; };
 		72617C5D28A113A0006E9935 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				7276F69E28A258EA00539AB6 /* DetailView.swift */,
 				7276F6A028A25AC300539AB6 /* DetailViewModel.swift */,
+				72455BA928A38558007E2C07 /* ThumbViewModel.swift */,
 			);
 			path = detail;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				72617C5E28A113A0006E9935 /* ImageManager.swift in Sources */,
 				72B4C37728A0E2890025BB0F /* OrderView.swift in Sources */,
 				7276F69F28A258EA00539AB6 /* DetailView.swift in Sources */,
+				72455BAA28A38558007E2C07 /* ThumbViewModel.swift in Sources */,
 				7276F69C28A252EB00539AB6 /* OnbanContentViewModel.swift in Sources */,
 				72617C5C28A0F603006E9935 /* OnbanDTO.swift in Sources */,
 				72B4C37528A0E2890025BB0F /* SideDish_SwiftUIApp.swift in Sources */,

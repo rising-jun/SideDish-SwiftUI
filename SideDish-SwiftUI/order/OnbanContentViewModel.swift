@@ -22,7 +22,6 @@ final class OnbanContentViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .assign(to: \.imageData, on: self)
         }
-    
     deinit {
         imageCancellabel?.cancel()
     }
