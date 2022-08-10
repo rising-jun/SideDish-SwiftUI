@@ -13,26 +13,34 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            List {
+            List() {
                 Section {
-                    Text("빵")
+                    ForEach(sideDishInfo.body) { menu in
+                        MainViewCell(menu: menu)
+                            .listRowSeparator(.hidden)
+                    }
                 } header: {
                     Text("모두가 좋아하는 든든한 메인 요리")
-                        .fontWeight(.bold)
                 }
 
                 Section {
-                    Text("정성이 담긴 뜨끈뜨근 국물 요리")
+                    ForEach(sideDishInfo.body) { menu in
+                        MainViewCell(menu: menu)
+                            .listRowSeparator(.hidden)
+                    }
+                } header: {
+                    Text("정성이 담긴 뜨끈뜨끈 국물 요리")
                 }
-                
                 Section {
-                    Text("식탁을 풍성하게 하는 밑 반찬")
-                }
-                
-
+                    ForEach(sideDishInfo.body) { menu in
+                        MainViewCell(menu: menu)
+                            .listRowSeparator(.hidden)
+                    }
+                } header: {
+                    Text("식탁을 풍성하게 하는 정갈한 밑반찬")
+                }                
             }
             .listStyle(.plain)
-            
             .navigationTitle("Ordering")
             .navigationBarTitleDisplayMode(.inline)
         }

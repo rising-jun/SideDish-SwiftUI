@@ -19,7 +19,7 @@ struct MockData {
                                                                         n_price: "15,800원",
                                                                         s_price: "12,640원",
                                                                         badge: [
-                                                                           "런칭특가"
+                                                                           
                                                                         ]),
                                                                  Menu(id: "HDF73",
                                                                         image: "http://public.codesquad.kr/jk/storeapp/data/main/310_ZIP_P_0012_T.jpg",

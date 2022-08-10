@@ -15,10 +15,14 @@ struct MainViewCell: View {
     var body: some View {
         HStack {
             KFImage(URL(string: menu.image))
+                .resizable()
                 .aspectRatio(contentMode: .fit)
+                
             VStack(alignment: .leading, spacing: 5.0) {
+                
                 Text(menu.title)
                     .fontWeight(.bold)
+                
                 Text(menu.description)
                     .foregroundColor(.secondary)
                     .lineLimit(1)
@@ -29,15 +33,19 @@ struct MainViewCell: View {
                     Text(menu.n_price ?? "")
                         .strikethrough()
                         .foregroundColor(.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                 }
                 
                 Spacer().frame(height: 8)
-                
+
                 HStack {
-                ForEach(menu.badge ?? [], id: \.self) { badge in
+                ForEach(menu.badge ?? [] , id: \.self) { badge in
                     Text(badge)
-                        .padding(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
-                        .frame(width: .infinity, height: 30, alignment: .center)
+                        .padding(EdgeInsets(top: 4,
+                                            leading: 16,
+                                            bottom: 4,
+                                            trailing: 16))
                         .background(Color.blue)
                         .cornerRadius(20)
                         .foregroundColor(.white)
@@ -47,7 +55,6 @@ struct MainViewCell: View {
                 }
             }
         }
-        .padding(30)
         .lineSpacing(8)
         .background(Color.yellow)
     }
@@ -55,6 +62,6 @@ struct MainViewCell: View {
 
 struct MainViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainViewCell(menu: MockData.sideDishInfo.body[2])
+        MainViewCell(menu: MockData.sideDishInfo.body[0])
     }
 }
