@@ -9,30 +9,34 @@ import SwiftUI
 
 struct MainView: View {
     
+    @StateObject var viewModel: MainViewModel = MainViewModel()
+    
     var sideDishInfo: SideDishInfo = MockData.sideDishInfo
     
     var body: some View {
         NavigationView {
             List() {
+                // main
                 Section {
-                    ForEach(sideDishInfo.body) { menu in
+                    ForEach(viewModel.mainMenus) { menu in
                         MainViewCell(menu: menu)
                             .listRowSeparator(.hidden)
                     }
                 } header: {
                     MainHeaderView(headerText: "모두가 좋아하는\n든든한 메인 요리")
                 }
-
+                // soup
                 Section {
-                    ForEach(sideDishInfo.body) { menu in
+                    ForEach(viewModel.soupMenus) { menu in
                         MainViewCell(menu: menu)
                             .listRowSeparator(.hidden)
                     }
                 } header: {
                     MainHeaderView(headerText: "모두가 좋아하는\n든든한 메인 요리")
                 }
+                // side
                 Section {
-                    ForEach(sideDishInfo.body) { menu in
+                    ForEach(viewModel.sideMenus) { menu in
                         MainViewCell(menu: menu)
                             .listRowSeparator(.hidden)
                     }
