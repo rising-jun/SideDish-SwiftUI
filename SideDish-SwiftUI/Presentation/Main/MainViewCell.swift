@@ -42,20 +42,22 @@ struct MainViewCell: View {
                 
                 Spacer().frame(height: 8)
 
-                HStack {
-                ForEach(menu.badge ?? [] , id: \.self) { badge in
-                    Text(badge)
-                        .frame(height: 20)
-                        .padding(EdgeInsets(top: 4,
-                                            leading: 16,
-                                            bottom: 4,
-                                            trailing: 16))
-                        .background(Color.blue)
-                        .cornerRadius(20)
-                        .foregroundColor(.white)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                    ForEach(menu.badge ?? [] , id: \.self) { badge in
+                        Text(badge)
+                            .frame(height: 20)
+                            .padding(EdgeInsets(top: 4,
+                                                leading: 16,
+                                                bottom: 4,
+                                                trailing: 16))
+                            .background(Color.blue)
+                            .cornerRadius(20)
+                            .foregroundColor(.white)
+                        }
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
                     }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
                 }
             }
         }
