@@ -8,11 +8,11 @@
 import Foundation
 
 struct Endpoint {
-    private let httpMethod: HTTPMethod
-    private let baseURL: BaseURL
-    private let path: Path
-    private let headers: [String: Any]?
-    private let body: [String: Any]?
+    let httpMethod: HTTPMethod
+    let baseURL: BaseURL
+    let path: Path
+    let headers: [String: Any]?
+    let body: [String: Any]?
     
     init(httpMethod: HTTPMethod, baseURL: BaseURL, path: Path, headers: [String: Any]? = ["Content-Type": "application/json"], body: [String: Any]? = nil) {
         self.httpMethod = httpMethod
@@ -24,11 +24,13 @@ struct Endpoint {
 }
 
 extension Endpoint {
-    var url: URL? {
+    var url: URL {
         let path = self.path.pathString
         let baseURL = self.baseURL.urlString
         
-        guard let url = URL(string: baseURL + path) else { return nil }
+        guard let url = URL(string: baseURL + path) else {
+            return URL(string: "URL: fail")!
+        }
         
         return url
     }
@@ -82,7 +84,7 @@ enum Path {
     }
 }
 
-enum Category {
+enum Category: CaseIterable {
     case main
     case soup
     case side

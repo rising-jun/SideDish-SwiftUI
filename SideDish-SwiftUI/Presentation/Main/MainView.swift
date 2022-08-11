@@ -48,6 +48,9 @@ struct MainView: View {
             .navigationTitle("Ordering")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .onAppear {
+            viewModel.fetchData()
+        }
     }
 }
 
