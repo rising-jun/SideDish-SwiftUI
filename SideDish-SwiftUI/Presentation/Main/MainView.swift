@@ -11,7 +11,7 @@ struct MainView: View {
     
     @StateObject var viewModel: MainViewModel = MainViewModel()
     
-    var sideDishInfo: SideDishInfo = MockData.sideDishInfo
+    var sideDishInfo: Menus = MockData.sideDishInfo
     
     var body: some View {
         NavigationView {
@@ -23,7 +23,7 @@ struct MainView: View {
                             .listRowSeparator(.hidden)
                     }
                 } header: {
-                    MainHeaderView(headerText: "모두가 좋아하는\n든든한 메인 요리")
+                    MainHeaderView(headerText: Category.main.title)
                 }
                 // soup
                 Section {
@@ -32,7 +32,7 @@ struct MainView: View {
                             .listRowSeparator(.hidden)
                     }
                 } header: {
-                    MainHeaderView(headerText: "모두가 좋아하는\n든든한 메인 요리")
+                    MainHeaderView(headerText: Category.soup.title)
                 }
                 // side
                 Section {
@@ -41,7 +41,7 @@ struct MainView: View {
                             .listRowSeparator(.hidden)
                     }
                 } header: {
-                    MainHeaderView(headerText: "모두가 좋아하는\n든든한 메인 요리")
+                    MainHeaderView(headerText: Category.side.title)
                 }                
             }
             .listStyle(.grouped)

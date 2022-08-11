@@ -1,5 +1,5 @@
 //
-//  DetailDishInfo.swift
+//  MenuDetails.swift
 //  SideDishApp
 //
 //  Created by 김상혁 on 2022/04/20.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DetailDishInfo: Codable, Equatable {
+struct MenuDetails: Codable, Equatable {
     let data: MenuDetail
 }
 

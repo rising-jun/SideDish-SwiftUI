@@ -1,5 +1,5 @@
 //
-//  SideDishInfo.swift
+//  Menus.swift
 //  SideDishApp
 //
 //  Created by 박진섭 on 2022/04/18.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct SideDishInfo: Codable {
+struct Menus: Codable {
     let body: [Menu]
 }
 
-extension SideDishInfo: Equatable {
-    static func == (lhs: SideDishInfo, rhs: SideDishInfo) -> Bool {
+extension Menus: Equatable {
+    static func == (lhs: Menus, rhs: Menus) -> Bool {
         lhs.body == rhs.body
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct MockData {
-    static let sideDishInfo: SideDishInfo =  SideDishInfo(body: [Menu(id: "HBDEF",
+    static let sideDishInfo: Menus =  Menus(body: [Menu(id: "HBDEF",
                                                                         image: "http://public.codesquad.kr/jk/storeapp/data/main/1155_ZIP_P_0081_T.jpg",
                                                                         delivery_type:  [
                                                                            "새벽배송",
