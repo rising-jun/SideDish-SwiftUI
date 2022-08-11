@@ -19,7 +19,7 @@ struct MainViewCell: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 170)
             
-            Spacer()
+            Spacer().frame(width: 8.0)
             
             VStack(alignment: .leading, spacing: 5.0) {
                 
@@ -61,7 +61,6 @@ struct MainViewCell: View {
         }
         .padding(.trailing, 8.0)
         .lineSpacing(8)
-        .background(Color.yellow)
     }
 }
 

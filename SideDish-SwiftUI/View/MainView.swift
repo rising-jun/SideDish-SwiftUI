@@ -20,7 +20,7 @@ struct MainView: View {
                             .listRowSeparator(.hidden)
                     }
                 } header: {
-                    Text("모두가 좋아하는 든든한 메인 요리")
+                    MainHeaderView(headerText: "모두가 좋아하는\n든든한 메인 요리")
                 }
 
                 Section {
@@ -29,7 +29,7 @@ struct MainView: View {
                             .listRowSeparator(.hidden)
                     }
                 } header: {
-                    Text("정성이 담긴 뜨끈뜨끈 국물 요리")
+                    MainHeaderView(headerText: "모두가 좋아하는\n든든한 메인 요리")
                 }
                 Section {
                     ForEach(sideDishInfo.body) { menu in
@@ -37,10 +37,10 @@ struct MainView: View {
                             .listRowSeparator(.hidden)
                     }
                 } header: {
-                    Text("식탁을 풍성하게 하는 정갈한 밑반찬")
+                    MainHeaderView(headerText: "모두가 좋아하는\n든든한 메인 요리")
                 }                
             }
-            .listStyle(.plain)
+            .listStyle(.grouped)
             .navigationTitle("Ordering")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -52,3 +52,5 @@ struct ContentView_Previews: PreviewProvider {
         MainView()
     }
 }
+
+
